@@ -1,0 +1,29 @@
+<main>
+    <img class="bg" src="assets/img/background.jpg" alt="">
+    <div class="main">
+        <p>Our Certificate & Online Programs For 202</p>
+    </div>
+    <div class="landing">
+        <img src="assets/img/certificate.jpg" alt="">
+        <div class="table">
+            <p class="category_heading">Post Categories</p>
+            <div class="about">
+                <div *ngFor="let item of categories" class="point">
+                    <p class="name">{{item.name}}</p>
+                    <p class="value">{{item.value}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="programs">
+        <p class="heading">Our Certificate & Online Programs For 202</p>
+        <p *ngFor="let item of programs" class="program">{{item}}</p>
+        <form action="">
+            <p>Leave a comment</p>
+            <input type="text" placeholder="Enter name">
+            <input type="email" placeholder="Enter Email">
+            <textarea name="" id="" cols="" rows="5"></textarea>
+        </form>
+        <button>Submit</button>
+    </div>
+    </main>

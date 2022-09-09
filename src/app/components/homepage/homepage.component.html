@@ -1,0 +1,76 @@
+<main>
+    <div class="landing">
+        <img class="bg" src="assets/img/banner.png" alt="">
+        <div class="filter"></div>
+        <p class="title"> World's Biggest University</p>
+        <p class="about">We’re a leading research university with a heart. Founded in the decade that the U.S.
+            Constitution was signed, we’re the nation’s oldest Catholic and Jesuit university. Today we’re a
+            forward-looking, diverse community devoted to social justice, restless inquiry and respect for each person’s
+            individual needs and talents..
+        </p>
+        <button>visit Us To know More</button>
+    </div>
+    <div class="section">
+        <p class="title2">Courses we offer</p>
+        <p class="about2">Explore the intersection of technology and society. Learn about environmental justice. Take
+            the famous Problem of God course. Our innovative courses inspire and invite you to help solve some of
+            today’s most pressing local, national and global issues.</p>
+    </div>
+    <div class="cards">
+        <div *ngFor="let item of cards" class="card">
+            <p>{{item.name}}</p>
+            <p>{{item.about}}</p>
+        </div>
+    </div>
+    <div class="section">
+        <p class="title2">Our Global Campus</p>
+        <p class="about2">The University of Hartford's main campus is located on Bloomfield Avenue. Surrounded by green
+            space, the main campus is divided into residential and academic buildings connected by a bridge that
+            overlooks the north branch of the Park River, known to us as Hog River.</p>
+    </div>
+    <div class="cards2">
+        <div *ngFor="let item of cards2" class="card2">
+            <img [src]="item.img" alt="">
+            <p>{{item.name}}</p>
+        </div>
+    </div>
+    <div class="section">
+        <p class="title2">Our Facilities</p>
+        <p class="about2">We commit to meet the financial need of every admitted undergraduate student. We don’t
+            consider your ability to pay when we review your application, and we don’t base our decision on whether you
+            can cover the cost. If you’re accepted here, you belong here.</p>
+    </div>
+    <div class="cards3">
+        <div *ngFor="let item of cards3" class="card3">
+            <img [src]="item.img" alt="">
+            <h3>{{item.name}}</h3>
+            <p>{{item.about}}</p>
+        </div>
+    </div>
+    <div class="section">
+        <p class="title2">What Our Student Says</p>
+        <p class="about2">We commit to meet the financial need of every admitted undergraduate student. We don’t
+            consider your ability to pay when we review your application, and we don’t base our decision on whether you
+            can cover the cost. If you’re accepted here, you belong here.</p>
+    </div>
+    <div class="reviewcards">
+        <div class="reviewcard" *ngFor="let card of reviewCards">
+            <div class="img">
+                <img [src]="card.img" alt="">
+            </div>
+            <div class="content">
+                <p class="comment">{{card.comment}}</p>
+                <p class="name">{{card.name}}</p>
+                <div class="icons">
+                    <i *ngFor="let star of card.stars" [class]="star"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="enroll">
+        <img class="bg2" src="assets/img/banner2.jpg" alt="">
+        <p>Enroll For Our Various Online Courses <br>
+            Anywhere from the World</p>
+        <button [routerLink]="['/contact']">Contact Us</button>
+    </div>
+</main>

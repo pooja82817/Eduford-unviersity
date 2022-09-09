@@ -1,0 +1,32 @@
+<main>
+    <img class="bg" src="assets/img/background.jpg" alt="">
+    <div class="main">
+        <p>Our Courses</p>
+    </div>
+    <div class="section">
+        <p class="title">Courses we offer</p>
+        <p class="about">Explore the intersection of technology and society. Learn about environmental justice. Take
+            the famous Problem of God course. Our innovative courses inspire and invite you to help solve some of
+            today’s most pressing local, national and global issues.</p>
+    </div>
+    <div class="cards">
+        <div *ngFor="let item of data.course_cards" class="card">
+            <p>{{item.name}}</p>
+            <p>{{item.about}}</p>
+        </div>
+    </div>
+    <div class="section">
+        <p class="title">Our Facilities</p>
+        <p class="about">We commit to meet the financial need of every admitted undergraduate student. We don’t
+            consider your ability to pay when we review your application, and we don’t base our decision on whether you
+            can cover the cost. If you’re accepted here, you belong here.</p>
+    </div>
+    <div class="cards2">
+        <div *ngFor="let item of data.facilities_cards" class="card2">
+            <img [src]="item.img" alt="">
+            <h3>{{item.name}}</h3>
+            <p>{{item.about}}</p>
+        </div>
+    </div>
+
+</main>

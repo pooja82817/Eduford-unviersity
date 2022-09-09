@@ -1,0 +1,21 @@
+<main id="header" >
+        <img [routerLink]="['']" src="assets/img/logo.png" alt="">
+        <nav>
+            <p [routerLink]="['']">Home</p>
+            <p [routerLink]="['about']" >ABOUT</p>
+            <p [routerLink]="['course']">COURSE</p>
+            <p [routerLink]="['blog']">BLOG</p>
+            <p [routerLink]="['contact']">CONTACT</p>
+        </nav>
+        <div class="menu">
+            <i (click)="toggleMenu()" class="fas fa-bars" ></i>
+            <div *ngIf="showMenu"  class="links">
+            <i (click)="toggleMenu()" class="fas fa-times" ></i>
+            <p (click)="toggleMenu()" [routerLink]="['']">Home</p>
+            <p (click)="toggleMenu()" [routerLink]="['about']" >ABOUT</p>
+            <p (click)="toggleMenu()" [routerLink]="['course']">COURSE</p>
+            <p (click)="toggleMenu()" [routerLink]="['blog']">BLOG</p>
+            <p (click)="toggleMenu()" [routerLink]="['contact']">CONTACT</p>
+            </div>
+        </div>
+</main>
